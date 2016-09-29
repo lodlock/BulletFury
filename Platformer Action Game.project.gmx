@@ -28,11 +28,19 @@
     <script>scripts\scrDrawGui.gml</script>
     <script>scripts\scrStartWave.gml</script>
     <script>scripts\scrWindowSetup.gml</script>
-    <script>scripts\scrMainMenu.gml</script>
-    <script>scripts\scrSettingMenu.gml</script>
     <scripts name="Networking">
       <script>scripts\scrClientRecievedPacket.gml</script>
       <script>scripts\scrServerRecievedPacket.gml</script>
+    </scripts>
+    <scripts name="Collision">
+      <script>scripts\scrPlayerCollision.gml</script>
+    </scripts>
+    <scripts name="menus">
+      <script>scripts\scrMainMenu.gml</script>
+      <script>scripts\scrSettingMenu.gml</script>
+    </scripts>
+    <scripts name="Pickups">
+      <script>scripts\scrBulletPickup.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -70,6 +78,10 @@
     <objects name="Menus">
       <object>objects\oMainMenu</object>
       <object>objects\oSettings</object>
+    </objects>
+    <objects name="Pickups">
+      <object>objects\oPickupParent</object>
+      <object>objects\oBulletPickup</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -100,6 +100,13 @@ alarm[0] = 1;
             <string>///Explode!!
 
 scrHurt(other, 45);
+
+with(other)
+{
+    x += dir * 5;
+    y -= 5;
+}
+
 instance_destroy();
 </string>
           </argument>

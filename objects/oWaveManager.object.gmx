@@ -69,7 +69,7 @@ scrStartWave();
 
 if(currentWaveEnemies &lt; enemiesToSpawn)
 {
-    alarm[0] = 10;
+    alarm[0] = 30;
 }
 else
 {
