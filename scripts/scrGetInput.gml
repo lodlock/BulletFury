@@ -1,9 +1,22 @@
 ///scrGetInput()
 
-rightKey = keyboard_check(vk_right);
-leftKey = -keyboard_check(vk_left);
-jumpKey = keyboard_check_pressed(ord("Z"));
-shootKey = keyboard_check(ord("X"));
+switch(oPrefrences.keyConfig)
+{
+    case 0:
+        rightKey = keyboard_check(vk_right);
+        leftKey = -keyboard_check(vk_left);
+        jumpKey = keyboard_check_pressed(ord("Z"));
+        shootKey = keyboard_check(ord("X"));
+        reloadKey = keyboard_check_pressed(ord("R"));
+        break;
+    case 1:
+        rightKey = keyboard_check(ord("D"));
+        leftKey = -keyboard_check(ord("A"));
+        jumpKey = keyboard_check_pressed(vk_space);
+        shootKey = mouse_check_button(mb_left);
+        reloadKey = keyboard_check_pressed(ord("R"));
+        break
+}
 
 upMenuKey = keyboard_check_pressed(vk_up);
 downMenuKey = keyboard_check_pressed(vk_down);

@@ -2,4 +2,4 @@
 
 amount = argument0;
 
-oPlayer.bullets += amount;
+oPlayer.mags += amount;

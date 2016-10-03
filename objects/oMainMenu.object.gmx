@@ -30,7 +30,7 @@
 mainMenu[0] = "Singleplayer";
 mainMenu[1] = "Host Game";
 mainMenu[2] = "Join Game"
-mainMenu[3] = "Options";
+mainMenu[3] = "Settings";
 mainMenu[4] = "Quit Game";
 
 mainMenuPos = 0;

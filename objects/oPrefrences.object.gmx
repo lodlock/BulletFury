@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>windowScale = 5;
+            <string>windowScale = 4;
+fullscreen = false;
+keyConfig = 0; //0 is classic 1 is wasd
 </string>
           </argument>
         </arguments>

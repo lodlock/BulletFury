@@ -19,13 +19,13 @@
     <sprite>sprites\sprShell</sprite>
     <sprite>sprites\sorBullet</sprite>
     <sprite>sprites\sprExplosion</sprite>
+    <sprite>sprites\sprAmmoBox</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scrGetInput.gml</script>
     <script>scripts\scrHurt.gml</script>
-    <script>scripts\scrDrawGui.gml</script>
     <script>scripts\scrStartWave.gml</script>
     <script>scripts\scrWindowSetup.gml</script>
     <scripts name="Networking">
@@ -38,9 +38,15 @@
     <scripts name="menus">
       <script>scripts\scrMainMenu.gml</script>
       <script>scripts\scrSettingMenu.gml</script>
+      <script>scripts\scrKeyboardSwitch.gml</script>
     </scripts>
     <scripts name="Pickups">
       <script>scripts\scrBulletPickup.gml</script>
+    </scripts>
+    <scripts name="Player">
+      <script>scripts\scrDrawGui.gml</script>
+      <script>scripts\scrMagSystem.gml</script>
+      <script>scripts\scrSpawnBullets.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -83,6 +89,7 @@
       <object>objects\oPickupParent</object>
       <object>objects\oBulletPickup</object>
     </objects>
+    <object>objects\oPortal</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Menus">
@@ -90,6 +97,7 @@
       <room>rooms\rmSettings</room>
     </rooms>
     <room>rooms\rmLvl</room>
+    <room>rooms\rmLvl2</room>
     <room>rooms\rmMultiplayerHost</room>
     <room>rooms\rmMultiplayerClient</room>
   </rooms>

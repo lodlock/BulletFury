@@ -28,7 +28,8 @@
             <string>///Init setting menu
 settingMenu[0] = "&lt; Scale: x" + string(oPrefrences.windowScale) + " &gt;";
 settingMenu[1] = "&lt; Controls: " + "Classic" + " &gt;";
-settingMenu[2] = "Back";
+settingMenu[2] = "Fullsceen: " + string(oPrefrences.fullscreen);
+settingMenu[3] = "Back";
 
 settingMenuPos = 0;
 
@@ -73,6 +74,8 @@ if(oInputManager.leftMenuKey)
             settingMenu[0] = "&lt; Scale: x" + string(oPrefrences.windowScale) + " &gt;";
             break;
         case 1:
+            oPrefrences.keyConfig--;
+            scrKeyboardSwitch();
             break;
     }
 }
@@ -87,6 +90,8 @@ if(oInputManager.rightMenuKey)
             settingMenu[0] = "&lt; Scale: x" + string(oPrefrences.windowScale) + " &gt;";
             break;
         case 1:
+            oPrefrences.keyConfig++;
+            scrKeyboardSwitch();
             break;
     }
 }

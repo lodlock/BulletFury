@@ -39,6 +39,7 @@ bullets = 12;
 
 facingRight = -1;
 
+canReload = false;
 can_shoot = true;
 fire_rate = 0.15;
 
@@ -97,16 +98,14 @@ hspd = move * mspd;
 
 scrPlayerCollision();
 
+scrMagSystem();
+
 //Check for diffrent inputs
-if(oInputManager.shootKey &amp;&amp; can_shoot)
+if(oInputManager.shootKey &amp;&amp; can_shoot &amp;&amp; !canReload)
 {
-    with instance_create(x + facingRight * 8, y + 4, oBullet)
-    {
-        hspeed = other.facingRight*15    
     
-        direction += random(12)-6
-        image_angle = direction
-    }
+    scrSpawnBullets();
+    
     with instance_create(x,y, oShell)
     {
         hspeed = -other.facingRight*(2+random(1))
@@ -120,7 +119,14 @@ if(oInputManager.shootKey &amp;&amp; can_shoot)
     audio_play_sound(sndShoot, 0, false);
     oCam.shake = 3;
     alarm[0] = room_speed * fire_rate;
+    bullets--;
     can_shoot = false;
+}
+
+if(oInputManager.reloadKey &amp;&amp; canReload)
+{
+    mags--;
+    bullets = 12;
 }
 
 if(oInputManager.rightKey == 1)
@@ -146,6 +152,30 @@ else
     sprite_index = sprPlayerIdle;
     image_speed = 0.2;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="oPortal">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x = oWaveManager.x;
+y = oWaveManager.y;
 </string>
           </argument>
         </arguments>
@@ -230,29 +260,6 @@ switch(sprite_index)
         break;
 }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>game_restart();
 </string>
           </argument>
         </arguments>

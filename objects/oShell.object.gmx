@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gravity = 0.2
+            <string>gravity = 0.2;
 image_angle = random(360)
 </string>
           </argument>

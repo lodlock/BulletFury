@@ -37,6 +37,7 @@ currentWaveEnemies = 0;
 waveStart = true;
 canSpawn = false;
 
+//Bug if you shoot enemies while other enemies still are spawning there will spawn more than the enemiesToSpawn
 scrStartWave();
 //waveEnd = false; --I maybe need this later
 </string>

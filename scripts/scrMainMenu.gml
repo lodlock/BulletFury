@@ -2,7 +2,7 @@
 switch(mainMenuPos)
 {
     case 0:
-        room_goto(rmLvl);
+        room_goto(rmLvl2);
         break;
     case 1:
         room_goto(rmMultiplayerHost);
